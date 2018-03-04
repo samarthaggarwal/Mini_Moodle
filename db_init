@@ -1,3 +1,33 @@
+create database db_mini_moodle;
+use db_mini_moodle;
+
+create table login(
+username varchar(255),
+password varchar(255),
+type varchar(20)
+);
+
+alter table login add primary key (username);
+
+insert into login values ("prof_1","pass_prof_1","prof");
+insert into login values ("prof_2","pass_prof_2","prof");
+insert into login values ("prof_3","pass_prof_3","prof");
+insert into login values ("prof_4","pass_prof_4","prof");
+insert into login values ("prof_5","pass_prof_5","prof");
+insert into login values ("student_1","pass_stud_1","student");
+insert into login values ("student_2","pass_stud_2","student");
+insert into login values ("student_3","pass_stud_3","student");
+insert into login values ("student_4","pass_stud_4","student");
+insert into login values ("student_5","pass_stud_5","student");
+insert into login values ("student_6","pass_stud_6","student");
+insert into login values ("student_7","pass_stud_7","student");
+insert into login values ("student_8","pass_stud_8","student");
+insert into login values ("student_9","pass_stud_9","student");
+insert into login values ("student_10","pass_stud_10","student");
+insert into login values ("admin","admin","admin");
+
+create table messages( course varchar(255), message varchar(1000), time timestamp null);
+
 create table reg(
   course varchar(255),
   student_1 timestamp null,
@@ -16,8 +46,6 @@ alter table reg add primary key (course);
 
 create table messages(
   course varchar(255),
-  message varchar(1000);
-  time timestamp null,
+  message varchar(1000),
+  time timestamp null
 );
-
-alter table reg add $username timestamp null;
