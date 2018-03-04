@@ -1,0 +1,23 @@
+create table reg(
+  course varchar(255),
+  student_1 timestamp null,
+  student_2 timestamp null,
+  student_3 timestamp null,
+  student_4 timestamp null,
+  student_5 timestamp null,
+  student_6 timestamp null,
+  student_7 timestamp null,
+  student_8 timestamp null,
+  student_9 timestamp null,
+  student_10 timestamp null
+);
+
+alter table reg add primary key (course);
+
+create table messages(
+  course varchar(255),
+  message varchar(1000);
+  time timestamp null,
+);
+
+alter table reg add $username timestamp null;
